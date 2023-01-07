@@ -1,5 +1,13 @@
 import React from "react";
+import { FiBookOpen } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
+import { TfiPencil } from "react-icons/tfi";
 
+const itemText = [
+  { text: "MEBIS", icon: <FiBookOpen /> },
+  { text: "Webmail (Outlook)", icon: <HiOutlineMail /> },
+  { text: "Online İşlemler", icon: <TfiPencil /> },
+];
 const Header = () => {
   return (
     <>
@@ -29,12 +37,16 @@ const Header = () => {
       </header>
       <br></br>
       <br></br>
-      <div className="bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-grey rounded-b">
-        <span className="pl-10">AtaatatatatSDGSDG</span>
-        <hr></hr>
-        <span className="pl-10">ASDGSDG</span>
-        <hr></hr>
-        <span className="pl-10">ASDGSDG</span>
+      <div className="online-services-menu bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-white rounded-b">
+        {itemText.map((item) => (
+          <>
+            <span className="pl-6 flex items-center gap-2">
+              {item.icon}
+              {item.text}
+            </span>
+            <hr></hr>
+          </>
+        ))}
       </div>
     </>
   );

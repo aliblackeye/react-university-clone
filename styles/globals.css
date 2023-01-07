@@ -19,15 +19,6 @@ body {
   @apply max-w-[1170px] w-full mx-auto px-4;
 }
 
-/* Header Styling */
-.header-navbar .nav-item {
-  @apply py-10 relative uppercase hover:text-secondary transition-all duration-300 ease-in-out;
-}
-
-.header-navbar .nav-link::after {
-  @apply content-[''] bg-secondary transition-all duration-300 ease-in-out w-0 h-[2px]  bottom-0 left-0 absolute;
-}
-
-.header-navbar .nav-link:hover::after {
-  width: 100%;
+.header-top a{
+  @apply hover:underline-offset-1 hover:underline decoration-white;
 }

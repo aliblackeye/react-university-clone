@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {FunctionComponent} from "react";
+import React from "react";
 
 const navbarElements = [
   {
@@ -15,27 +15,41 @@ const navbarElements = [
 
 const Header: FunctionComponent = () => {
   return (
-    <header>
-      <div className="header container flex items-center justify-between">
-        <div className="header-brand">
-          <img
-            src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
-            alt="brand-logo"
-          />
+    <>
+      <header className=" bg-primary text-white font-regular">
+        <div className="header-top container text-m flex justify-between">
+          <div className="header-top_left space-x-6 py-4">
+            <a href="https://www.medipol.edu.tr/">TR</a>
+            <span>|</span>
+            <a href="https://mio.medipol.edu.tr/apply-now/">
+              For International Students
+            </a>
+            <a href="https://medipol.com.tr/">University Hospital</a>
+            <a href="https://www.medipol.edu.tr/en/about-medipol/contact-us">
+              Contact
+            </a>
+            <a href="https://radyo.medipol.edu.tr/">Radio Medipol</a>
+          </div>
+          <div className="header-top_right space-x-6 py-4">
+            <a href="https://sanaltur.medipol.edu.tr/">360° Virtual Tour</a>
+            <a href="https://www.medipol.edu.tr/en/node/1358">Press</a>
+            <a href="https://www.medipol.edu.tr/en/akademik/fakulteler/saglik-bilimleri-fakultesi/bolumler/saglik-yonetimi/academic-calendar">
+              Academic Calendar
+            </a>
+            <a href="#">Online Services</a>
+          </div>
         </div>
-        <nav className="header-navbar  text-primary text-lg font-semibold">
-          <ul className="nav-items flex gap-10">
-            {navbarElements.map((el, key) => (
-              <li key={key} className="nav-item">
-                <a className="nav-link" href="#">
-                  {el.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      </header>
+      <br></br>
+      <br></br>
+      <div className="bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-grey rounded-b">
+        <span className="pl-10">ASDGSDG</span>
+        <hr></hr>
+        <span className="pl-10">ASDGSDG</span>
+        <hr></hr>
+        <span className="pl-10">ASDGS555DG</span>
       </div>
-    </header>
+    </>
   );
 };
 

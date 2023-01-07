@@ -1,13 +1,18 @@
-import React from "react";
+// Icons
 import { FiBookOpen } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { TfiPencil } from "react-icons/tfi";
 
+// Partials
+import { navbarElements } from "./_partials/headerDatas";
+
+// Data
 const itemText = [
   { text: "MEBIS", icon: <FiBookOpen /> },
   { text: "Webmail (Outlook)", icon: <HiOutlineMail /> },
   { text: "Online İşlemler", icon: <TfiPencil /> },
 ];
+
 const Header = () => {
   return (
     <>
@@ -35,15 +40,36 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <br></br>
-      <br></br>
-      <div className="online-services-menu bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-white rounded-b mx-auto">
-        {itemText.map((item) => (
+      <header className="header-main">
+        <div className="container flex items-center justify-between">
+          <div className="header-brand">
+            <img
+              src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
+              alt="brand-logo"
+            />
+          </div>
+          <nav className="header-navbar  text-primary text-lg font-semibold">
+            <ul className="nav-items flex gap-10">
+              {navbarElements.map((el, key) => (
+                <li key={key} className="nav-item">
+                  <a className="nav-link" href="#">
+                    {el.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div className="online-services-menu bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-white rounded-b">
+        {itemText.map((item, key) => (
           <>
-            <span className="pl-6 flex items-center gap-2">
-              {item.icon}
-              {item.text}
-            </span>
+            <div key={key} className="pl-6 flex items-center gap-2">
+              <>
+                {item.icon}
+                <span>{item.text}</span>
+              </>
+            </div>
             <hr></hr>
           </>
         ))}

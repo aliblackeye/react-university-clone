@@ -14,8 +14,17 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  @apply max-w-[1170px] w-full mx-auto px-4;
+}
+
+.header-navbar .nav-item {
+  @apply py-10 relative;
+}
+
+.header-navbar .nav-link::after {
+  @apply content-[''] bg-secondary transition-all duration-300 ease-in-out w-0 h-[2px]  bottom-0 left-0 absolute;
+}
+
+.header-navbar .nav-link:hover::after {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
 }

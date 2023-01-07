@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import {FunctionComponent} from "react";
 
 const navbarElements = [
   {
@@ -13,7 +13,7 @@ const navbarElements = [
   },
 ];
 
-const Header = () => {
+const Header: FunctionComponent = () => {
   return (
     <header>
       <div className="header container flex items-center justify-between">

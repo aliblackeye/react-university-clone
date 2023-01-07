@@ -39,15 +39,14 @@ const Header = () => {
             <a href="#">Online Services</a>
           </div>
         </div>
+
       </header>
       <br></br>
       <br></br>
       <div className="bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-grey rounded-b">
         <span className="pl-10">ASDGSDG</span>
         <hr></hr>
-        <span className="pl-10">ASDG1515131SDG</span>
-        <hr></hr>
-        <span className="pl-10">ASDGS555DG</span>
+
       </div>
     </>
   );

@@ -1,24 +1,16 @@
-import React from "react";
+// Icons
 import { FiBookOpen } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { TfiPencil } from "react-icons/tfi";
 
+// Partials
+import { navbarElements } from "./_partials/headerDatas";
+
+// Data
 const itemText = [
   { text: "MEBIS", icon: <FiBookOpen /> },
   { text: "Webmail (Outlook)", icon: <HiOutlineMail /> },
   { text: "Online İşlemler", icon: <TfiPencil /> },
-];
-
-const navbarElements = [
-  {
-    name: "ACADEMICS",
-    subMenu: [
-      {
-        title: "TEST",
-        links: [{ text: "Test Text", href: "/" }],
-      },
-    ],
-  },
 ];
 
 const Header = () => {
@@ -51,12 +43,14 @@ const Header = () => {
       <br></br>
       <br></br>
       <div className="online-services-menu bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-white rounded-b">
-        {itemText.map((item) => (
+        {itemText.map((item, key) => (
           <>
-            <span className="pl-6 flex items-center gap-2">
-              {item.icon}
-              {item.text}
-            </span>
+            <div key={key} className="pl-6 flex items-center gap-2">
+              <>
+                {item.icon}
+                <span>{item.text}</span>
+              </>
+            </div>
             <hr></hr>
           </>
         ))}

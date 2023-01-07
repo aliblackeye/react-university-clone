@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 
 const navbarElements = [
   {
@@ -13,7 +12,7 @@ const navbarElements = [
   },
 ];
 
-const Header: FunctionComponent = () => {
+const Header = () => {
   return (
     <>
       <header className=" bg-primary text-white font-regular">

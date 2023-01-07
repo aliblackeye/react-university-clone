@@ -23,6 +23,7 @@ const Header = () => {
             alt="brand-logo"
           />
         </div>
+<<<<<<< Updated upstream
         <nav className="header-navbar  text-primary text-lg font-semibold">
           <ul className="nav-items flex gap-10">
             {navbarElements.map((el, key) => (
@@ -34,6 +35,17 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+=======
+      </header>
+      <br></br>
+      <br></br>
+      <div className="bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-grey rounded-b">
+        <span className="pl-10">ASDGSDG</span>
+        <hr></hr>
+        <span className="pl-10">ASDGSD5111G</span>
+        <hr></hr>
+        <span className="pl-10">ASDGS555DG</span>
+>>>>>>> Stashed changes
       </div>
     </header>
   );

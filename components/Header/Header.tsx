@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import React from "react";
 
 const navbarElements = [
   {
@@ -44,7 +45,7 @@ const Header = () => {
       <div className="bg-primary text-white font-regular w-[188px] h-[257px] flex flex-col justify-evenly border-t-2 border-grey rounded-b">
         <span className="pl-10">ASDGSDG</span>
         <hr></hr>
-        <span className="pl-10">ASDGSDG</span>
+        <span className="pl-10">ASDG1515131SDG</span>
         <hr></hr>
         <span className="pl-10">ASDGS555DG</span>
       </div>

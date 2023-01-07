@@ -2,11 +2,15 @@
 import React from "react";
 
 const navbarElements = [
-  "ACADEMICS",
-  "ABOUT MEDIPOL",
-  "PROSPECTIVE STUDENTS",
-  "ACTIVE STUDENTS",
-  "RESEARCH",
+  {
+    name: "ACADEMICS",
+    subMenu: [
+      {
+        title: "TEST",
+        links: [{ text: "Test Text", href: "/" }],
+      },
+    ],
+  },
 ];
 
 const Header = () => {
@@ -24,7 +28,7 @@ const Header = () => {
             {navbarElements.map((el, key) => (
               <li key={key} className="nav-item">
                 <a className="nav-link" href="#">
-                  {el}
+                  {el.name}
                 </a>
               </li>
             ))}

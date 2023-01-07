@@ -34,7 +34,7 @@ const Header = () => {
         <hr></hr>
         <span className="pl-10">ASDGSDG</span>
         <hr></hr>
-        <span className="pl-10">ASDGSDG</span>
+        <span className="pl-10">ASDGS555DG</span>
       </div>
     </>
   );

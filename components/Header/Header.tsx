@@ -6,7 +6,7 @@ import { TfiPencil } from "react-icons/tfi";
 // Partials
 import { navbarElements } from "./_partials/headerDatas";
 
-// Data
+// Datas
 const itemText = [
   { text: "MEBIS", icon: <FiBookOpen /> },
   { text: "Webmail (Outlook)", icon: <HiOutlineMail /> },

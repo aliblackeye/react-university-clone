@@ -31,3 +31,11 @@ body {
 .header-navbar .nav-link:hover::after {
   width: 100%;
 }
+
+.header-top a {
+  @apply hover:underline-offset-1 hover:underline decoration-white;
+}
+
+.online-services-menu hr:last-child {
+  display: none;
+}

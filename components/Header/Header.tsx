@@ -8,7 +8,6 @@ const Header = () => {
     <>
       <HeaderTop />
       <HeaderMain />
-      <OnlineServicesMenu />
     </>
   );
 };

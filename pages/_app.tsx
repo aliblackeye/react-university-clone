@@ -1,6 +1,10 @@
 // Next
 import type { AppProps } from "next/app";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/bundle";
+
 // Components
 import Layout from "../components/layout/Layout";
 

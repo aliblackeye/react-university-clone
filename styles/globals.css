@@ -42,3 +42,11 @@ body {
   padding: 0 !important;
   @apply bg-[rgba(255,255,255,.25)];
 }
+
+.btn {
+  @apply bg-white text-primary py-3 px-6  transition-all duration-300 ease-in-out;
+}
+
+.btn-outline-primary {
+  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary;
+}

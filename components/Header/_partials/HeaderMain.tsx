@@ -6,12 +6,12 @@ export const HeaderMain = () => {
   // State Variables
   const [submenuItems, setSubmenuItems] = useState<String>("");
   const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  // Methods
   const handleMouseLeave = () => {
     setIsVisible(false);
     setSubmenuItems("");
   };
-
-  const handleMouseEnter = () => {};
 
   return (
     <header className="header-main relative" onMouseLeave={handleMouseLeave}>
@@ -28,7 +28,7 @@ export const HeaderMain = () => {
               <a
                 href="#"
                 key={key}
-                className="nav-item"
+                className="nav-item "
                 onMouseEnter={() => {
                   setIsVisible(true);
                   setSubmenuItems(el.name);
@@ -40,9 +40,11 @@ export const HeaderMain = () => {
           </div>
         </nav>
       </div>
+
+      {/* Header Submenu Items */}
       <nav
-        className={`header-submenu-items absolute z-[9] right-0 left-0 bg-[#eff3f7] w-full transition-opacity delay-500 ${
-          isVisible ? "opacity-100" : "opacity-0 hidden"
+        className={`header-submenu-items absolute z-[9] right-0 left-0 bg-[#eff3f7] w-full transition-opacity   ${
+          isVisible ? "opacity-100" : "opacity-0 "
         }`}
       >
         <div className="header-submenu-column flex gap-10 pt-[25px] pb-[45px] container ">
@@ -53,7 +55,7 @@ export const HeaderMain = () => {
                 {submenuItem.map((el, key) => (
                   <div key={key} className={`submenu-column flex flex-col`}>
                     <Link
-                      className="text-lg font-semibold mb-[10px] hover:underline"
+                      className="text-lg font-semibold text-primary mb-[10px] hover:underline"
                       href={"/"}
                     >
                       {el?.title}

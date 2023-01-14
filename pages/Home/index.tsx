@@ -1,5 +1,6 @@
 // Next
 import Head from "next/head";
+import Hero from "./_partials/Hero";
 
 const Home = () => {
   return (
@@ -10,7 +11,9 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main>Homepage</main>
+      <main>
+        <Hero />
+      </main>
     </>
   );
 };

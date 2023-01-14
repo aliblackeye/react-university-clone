@@ -36,6 +36,10 @@ body {
   @apply hover:underline-offset-1 hover:underline decoration-white;
 }
 
-.online-services-menu hr:last-child {
-  display: none;
+.divider
+{
+  width: 100%;
+  height: 1px;
+  padding: 0 !important;
+  @apply bg-[rgba(255,255,255,.25)];
 }

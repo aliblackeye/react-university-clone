@@ -1,8 +1,15 @@
+// React
+import { useState } from "react";
+
+// Constants
 import { navbarElements } from "./headerDatas";
 
 export const HeaderMain = () => {
+  // State Variables
+  const [submenuItems, setSubmenuItems] = useState<String>("");
+
   return (
-    <header className="header-main">
+    <header className="header-main relative">
       <div className="container flex items-center justify-between">
         <div className="header-brand">
           <img
@@ -13,7 +20,13 @@ export const HeaderMain = () => {
         <nav className="header-navbar  text-primary text-lg font-semibold">
           <ul className="nav-items flex gap-10">
             {navbarElements.map((el, key) => (
-              <li key={key} className="nav-item">
+              <li
+                key={key}
+                className="nav-item"
+                onMouseEnter={() => {
+                  setSubmenuItems(el.name);
+                }}
+              >
                 <a className="nav-link" href="#">
                   {el.name}
                 </a>
@@ -22,6 +35,22 @@ export const HeaderMain = () => {
           </ul>
         </nav>
       </div>
+      <nav className="header-submenu-items absolute bg-[#eff3f7] w-full max-h-[550px] pt-[25px] pb-[45px]">
+        <div className="header-submenu-column flex flex-col">
+          {navbarElements
+            .filter((el) => el.name === submenuItems)[0]
+            ?.submenu.map((submenuItem, key) => {
+              if (submenuItem.title) {
+                return <h1 key={key}>{submenuItem.title}</h1>;
+              }
+              submenuItem.links.map((link, key) => (
+                <a key={key} href={link.href}>
+                  {link.text}
+                </a>
+              ));
+            })}
+        </div>
+      </nav>
     </header>
   );
 };

@@ -15,10 +15,8 @@ export const OnlineServicesMenu = () => {
       {itemText.map((item, key) => (
         <>
           <div key={key} className="pl-6 flex items-center gap-2">
-            <>
-              {item.icon}
-              <span>{item.text}</span>
-            </>
+            {item.icon}
+            <span>{item.text}</span>
           </div>
           <hr></hr>
         </>

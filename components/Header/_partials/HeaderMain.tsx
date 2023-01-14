@@ -12,10 +12,12 @@ export const HeaderMain = () => {
     <header className="header-main relative">
       <div className="container flex items-center justify-between">
         <div className="header-brand">
-          <img
-            src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
-            alt="brand-logo"
-          />
+          <a href="">
+            <img
+              src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
+              alt="brand-logo"
+            />
+          </a>
         </div>
         <nav className="header-navbar  text-primary text-lg font-semibold">
           <ul className="nav-items flex gap-10">

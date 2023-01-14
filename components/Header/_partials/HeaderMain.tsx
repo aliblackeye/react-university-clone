@@ -1,4 +1,6 @@
 import { navbarElements } from "./headerDatas";
+import { useState } from "react";
+import Link from "next/link";
 
 export const HeaderMain = () => {
   // State Variables

@@ -44,9 +44,9 @@ body {
 }
 
 .btn {
-  @apply bg-white text-primary py-3 px-6  transition-all duration-300 ease-in-out;
+  @apply cursor-pointer bg-white text-primary inline-block py-3 px-6  transition-all duration-300 ease-in-out;
 }
 
 .btn-outline-primary {
-  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary;
+  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary ;
 }

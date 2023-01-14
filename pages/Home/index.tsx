@@ -1,6 +1,7 @@
 // Next
 import Head from "next/head";
-import Hero from "./_partials/Hero";
+import HeroSection from "./_partials/HeroSection";
+import ParagraphSection from "./_partials/ParagraphSection";
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
-        <Hero />
+        <HeroSection />
+        <ParagraphSection/>
       </main>
     </>
   );

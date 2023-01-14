@@ -32,7 +32,7 @@ const Hero = () => {
                 <Image src={item.image} priority alt="hero" height={490} />
               </div>
 
-              <div className="hero-text-wrapper container ">
+              <div className="hero-text-wrapper container !px-0">
                 <div className="hero-text text-[46px]  z-10 top-1/4 -translate-y-5 absolute max-w-[350px]">
                   {item.title}
                   <button className="btn btn-outline-primary text-sm">

@@ -14,23 +14,17 @@ const itemText = [
 
 export const OnlineServicesMenu = () => {
   return (
-    <div className="online-services-menu absolute z-10 right-[-50px] top-10 flex justify-center">
-      <div className=" bg-primary text-white font-regular inline-flex flex-col shadow-2xl rounded-b w-[220px]">
-        {itemText.map((item, key) => {
-          if (item.divider) {
-            return <div key={key} className="divider"></div>;
-          } else {
-            return (
-              <Link key={key} href="#" style={{ textDecoration: "none" }}>
-                <div className="p-8 flex items-center space-x-2 transition-all hover:bg-white hover:text-primary hover:font-semibold cursor-pointer">
-                  {item.icon}
-
-                  <span>{item.text}</span>
-                </div>
-              </Link>
-            );
-          }
-        })}
+    <div>
+      <div className="online-services-menu bg-primary text-white font-regular inline-flex flex-col border-t-2 border-white rounded-b mx-auto">
+        {itemText.map((item, key) => (
+          <div key={key} className=" hover:bg-white">
+            <div className="p-4 flex items-center gap-2">
+              <span>{item.icon}</span>
+              <span>{item.text}</span>
+            </div>
+            <hr></hr>
+          </div>
+        ))}
       </div>
     </div>
   );

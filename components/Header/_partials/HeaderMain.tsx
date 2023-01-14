@@ -9,14 +9,12 @@ export const HeaderMain = () => {
   return (
     <header className="header-main relative">
       <div className="container flex items-center justify-between">
-        <Link href={"/"}>
-          <div className="header-brand">
-            <img
-              src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
-              alt="brand-logo"
-            />
-          </div>
-        </Link>
+        <div className="header-brand">
+          <img
+            src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
+            alt="brand-logo"
+          />
+        </div>
         <nav className="header-navbar  text-primary text-lg font-semibold">
           <ul className="nav-items flex gap-10">
             {navbarElements.map((el, key) => (

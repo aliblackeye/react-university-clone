@@ -7,7 +7,12 @@ export const HeaderMain = () => {
   const [submenuItems, setSubmenuItems] = useState<String>("");
 
   return (
-    <header className="header-main relative">
+    <header
+      className="header-main relative"
+      onMouseLeave={() => {
+        setSubmenuItems("");
+      }}
+    >
       <div className="container flex items-center justify-between">
         <div className="header-brand">
           <img
@@ -33,20 +38,35 @@ export const HeaderMain = () => {
           </ul>
         </nav>
       </div>
-      <nav className="header-submenu-items absolute bg-[#eff3f7] w-full max-h-[550px] pt-[25px] pb-[45px]">
-        <div className="header-submenu-column flex flex-col">
+      <nav
+        className={`header-submenu-items absolute z-[9] right-0 left-0 bg-[#eff3f7] w-full]`}
+      >
+        <div className="header-submenu-column flex gap-10 pt-[25px] pb-[45px] container ">
           {navbarElements
-            .filter((el) => el.name === submenuItems)[0]
-            ?.submenu.map((submenuItem, key) => {
-              if (submenuItem.title) {
-                return <h1 key={key}>{submenuItem.title}</h1>;
-              }
-              submenuItem.links.map((link, key) => (
-                <a key={key} href={link.href}>
-                  {link.text}
-                </a>
-              ));
-            })}
+            ?.filter((el) => el?.name === submenuItems)[0]
+            ?.submenu?.map((submenuItem, key) => (
+              <div key={key} className="flex flex-col">
+                {submenuItem.map((el, key) => (
+                  <div key={key} className="submenu-column flex flex-col">
+                    <Link
+                      className="text-lg font-semibold mb-[10px] hover:underline"
+                      href={"/"}
+                    >
+                      {el?.title}
+                    </Link>
+                    {el?.links?.map((link, key) => (
+                      <Link
+                        key={key}
+                        href={link?.href}
+                        className="text-[15px] font-normal mb-[10px] max-[275px] hover:underline"
+                      >
+                        {link?.text}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
         </div>
       </nav>
     </header>

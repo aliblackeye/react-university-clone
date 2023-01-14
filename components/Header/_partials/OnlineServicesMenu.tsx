@@ -5,16 +5,17 @@ import { HiOutlineMail } from "react-icons/hi";
 import { TfiPencil } from "react-icons/tfi";
 // Datas
 const itemText = [
+  { divider: true },
   { text: "MEBIS", icon: <FiBookOpen /> },
   { divider: true },
   { text: "Webmail (Outlook)", icon: <HiOutlineMail /> },
   { divider: true },
-  { text: "Online İşlemler", icon: <TfiPencil /> },
+  { text: "Online Transactions", icon: <TfiPencil /> },
 ];
 
 export const OnlineServicesMenu = () => {
   return (
-    <div className="online-services-menu absolute z-10 right-[-50px] top-10 flex justify-center">
+    <div className="online-services-menu absolute z-10 right-[-50px] top-[56px] flex justify-center">
       <div className=" bg-primary text-white font-regular inline-flex flex-col shadow-2xl rounded-b w-[220px]">
         {itemText.map((item, key) => {
           if (item.divider) {

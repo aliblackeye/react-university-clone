@@ -5,14 +5,16 @@ import Link from "next/link";
 export const HeaderMain = () => {
   // State Variables
   const [submenuItems, setSubmenuItems] = useState<String>("");
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const handleMouseLeave = () => {
+    setIsVisible(false);
+    setSubmenuItems("");
+  };
+
+  const handleMouseEnter = () => {};
 
   return (
-    <header
-      className="header-main relative"
-      onMouseLeave={() => {
-        setSubmenuItems("");
-      }}
-    >
+    <header className="header-main relative" onMouseLeave={handleMouseLeave}>
       <div className="container flex items-center justify-between">
         <div className="header-brand">
           <img
@@ -21,25 +23,27 @@ export const HeaderMain = () => {
           />
         </div>
         <nav className="header-navbar  text-primary text-lg font-semibold">
-          <ul className="nav-items flex gap-10">
+          <div className="nav-items flex gap-10">
             {navbarElements.map((el, key) => (
-              <li
+              <a
+                href="#"
                 key={key}
                 className="nav-item"
                 onMouseEnter={() => {
+                  setIsVisible(true);
                   setSubmenuItems(el.name);
                 }}
               >
-                <a className="nav-link" href="#">
-                  {el.name}
-                </a>
-              </li>
+                {el.name}
+              </a>
             ))}
-          </ul>
+          </div>
         </nav>
       </div>
       <nav
-        className={`header-submenu-items absolute z-[9] right-0 left-0 bg-[#eff3f7] w-full]`}
+        className={`header-submenu-items absolute z-[9] right-0 left-0 bg-[#eff3f7] w-full transition-opacity delay-500 ${
+          isVisible ? "opacity-100" : "opacity-0 hidden"
+        }`}
       >
         <div className="header-submenu-column flex gap-10 pt-[25px] pb-[45px] container ">
           {navbarElements
@@ -47,7 +51,7 @@ export const HeaderMain = () => {
             ?.submenu?.map((submenuItem, key) => (
               <div key={key} className="flex flex-col">
                 {submenuItem.map((el, key) => (
-                  <div key={key} className="submenu-column flex flex-col">
+                  <div key={key} className={`submenu-column flex flex-col`}>
                     <Link
                       className="text-lg font-semibold mb-[10px] hover:underline"
                       href={"/"}

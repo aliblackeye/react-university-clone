@@ -48,5 +48,17 @@ body {
 }
 
 .btn-outline-primary {
-  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary ;
+  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary;
+}
+
+.btn-outline-white {
+  @apply border bg-transparent hover:bg-white hover:text-orange font-semibold border-white text-white;
+}
+
+.academic-units-section {
+  background-image: url("https://www.medipol.edu.tr/themes/custom/medipol/components/unit_links/img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }

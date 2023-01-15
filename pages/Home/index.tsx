@@ -1,5 +1,6 @@
 // Next
 import Head from "next/head";
+import AcademicUnitsSection from "./_partials/AcademicUnitsSection";
 import FeaturesSection from "./_partials/FeaturesSection";
 import HeroSection from "./_partials/HeroSection";
 import NewsSection from "./_partials/NewsSection";
@@ -19,6 +20,7 @@ const Home = () => {
         <ParagraphSection/>
         <FeaturesSection/>
         <NewsSection/>
+        <AcademicUnitsSection/>
       </main>
     </>
   );

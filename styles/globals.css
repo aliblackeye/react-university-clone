@@ -24,11 +24,11 @@ body {
   @apply py-10 relative uppercase hover:text-secondary transition-all duration-300 ease-in-out;
 }
 
-.header-navbar .nav-link::after {
+.header-navbar .nav-item::after {
   @apply content-[''] bg-secondary transition-all duration-300 ease-in-out w-0 h-[2px]  bottom-0 left-0 absolute;
 }
 
-.header-navbar .nav-link:hover::after {
+.header-navbar .nav-item:hover::after {
   width: 100%;
 }
 
@@ -36,10 +36,29 @@ body {
   @apply hover:underline-offset-1 hover:underline decoration-white;
 }
 
-.divider
-{
+.divider {
   width: 100%;
   height: 1px;
   padding: 0 !important;
   @apply bg-[rgba(255,255,255,.25)];
+}
+
+.btn {
+  @apply cursor-pointer bg-white text-primary inline-block py-3 px-6  transition-all duration-300 ease-in-out;
+}
+
+.btn-outline-primary {
+  @apply border bg-transparent hover:bg-primary hover:text-white font-semibold border-primary text-primary;
+}
+
+.btn-outline-white {
+  @apply border bg-transparent hover:bg-white hover:text-orange font-semibold border-white text-white;
+}
+
+.academic-units-section {
+  background-image: url("https://www.medipol.edu.tr/themes/custom/medipol/components/unit_links/img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }

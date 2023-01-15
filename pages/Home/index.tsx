@@ -1,5 +1,11 @@
 // Next
 import Head from "next/head";
+import AcademicUnitsSection from "./_partials/AcademicUnitsSection";
+import FeaturesSection from "./_partials/FeaturesSection";
+import HeroSection from "./_partials/HeroSection";
+import LocationSection from "./_partials/LocationSection";
+import NewsSection from "./_partials/NewsSection";
+import ParagraphSection from "./_partials/ParagraphSection";
 
 const Home = () => {
   return (
@@ -10,7 +16,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className="h-screen">Homepage</main>
+      <main>Homepage</main>
     </>
   );
 };

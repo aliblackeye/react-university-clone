@@ -70,7 +70,7 @@ const Hero = () => {
           <SwiperSlide key={index}>
             <div className="hero-content">
               <div className="hero-img h-[490px]">
-                <Image src={item.image} priority alt="hero" fill  />
+                <Image src={item.image} priority alt="hero" fill />
               </div>
 
               <div className="hero-text-wrapper container !px-0">

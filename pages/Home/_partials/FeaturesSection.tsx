@@ -3,7 +3,7 @@ import Image from "next/image";
 const FeaturesSection = () => {
   return (
     <section className="features-section container flex gap-8 py-10 ">
-      <div className="features-card relative p-8  w-[555px] h-[269px] bg-orange-500">
+      <div className="features-card relative p-8  w-[555px] h-[269px] bg-orange">
         <h1 className="text-[36px] w-[250px] mt-5 text-white">Prospective Students</h1>
         <div className="features-img w-[244px] h-[315px] absolute left-1/2 bottom-0">
           <Image

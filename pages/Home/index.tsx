@@ -6,6 +6,7 @@ import HeroSection from "./_partials/HeroSection";
 import LocationSection from "./_partials/LocationSection";
 import NewsSection from "./_partials/NewsSection";
 import ParagraphSection from "./_partials/ParagraphSection";
+import VideoSection from "./_partials/VideoSection";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <NewsSection/>
         <AcademicUnitsSection/>
         <LocationSection/>
+        <VideoSection/>
       </main>
     </>
   );

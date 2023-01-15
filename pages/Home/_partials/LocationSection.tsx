@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LocationSection = () => {
   return (
-    <section className="location-section container flex gap-5">
+    <section className="location-section container mb-10 flex gap-5">
       <div className="location-details  flex flex-col gap-5 flex-1">
         <h3 className="text-[30px] text-primary">Haliç Campus</h3>
         <p >

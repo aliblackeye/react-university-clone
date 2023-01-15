@@ -12,8 +12,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "..styles/footer-corporation-slider.css";
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>

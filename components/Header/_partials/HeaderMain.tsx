@@ -1,6 +1,7 @@
 import { navbarElements } from "./headerDatas";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const HeaderMain = () => {
   // State Variables
@@ -16,12 +17,15 @@ export const HeaderMain = () => {
   return (
     <header className="header-main relative" onMouseLeave={handleMouseLeave}>
       <div className="container flex items-center justify-between">
-        <div className="header-brand">
-          <img
-            src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
-            alt="brand-logo"
-          />
-        </div>
+        <a href={"http://localhost:3000"}>
+          <div className="header-brand relative  w-[217px] h-[66px]">
+            <Image
+              src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
+              alt="brand"
+              fill
+            />
+          </div>
+        </a>
         <nav className="header-navbar  text-primary text-lg font-semibold">
           <div className="nav-items flex gap-10">
             {navbarElements.map((el, key) => (

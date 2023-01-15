@@ -85,7 +85,7 @@ const ParagraphSection = () => {
           </div>
         </div>
 
-        <div className="activities-swiper bg-orange-500 h-full p-10">
+        <div className="activities-swiper bg-orange-500 h-full bg-orange p-10">
           <div className="activity text-white flex gap-2 items-center">
             <div className="activity-date flex items-center  w-12 h-12 rounded-sm text-center p-1 text-xs break-word border">
               19 Dec 2022
@@ -102,7 +102,7 @@ const ParagraphSection = () => {
           </div>
         </div>
         <div className="btn-row flex justify-end mt-5">
-          <div className="btn btn-outline-primary   ">ALL ACTIVITIES</div>
+          <div className="btn btn-outline-primary">ALL ACTIVITIES</div>
         </div>
       </div>
     </section>

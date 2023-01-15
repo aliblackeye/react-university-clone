@@ -37,7 +37,7 @@ export const HeaderMain = () => {
           </ul>
         </nav>
       </div>
-      <nav className="header-submenu-items absolute bg-[#eff3f7] w-full max-h-[550px] pt-[25px] pb-[45px]">
+      <nav className="header-submenu-items bg-[#eff3f7] w-full max-h-[550px] pt-[25px] pb-[45px]">
         <div className="header-submenu-column flex flex-col">
           {navbarElements
             .filter((el) => el.name === submenuItems)[0]

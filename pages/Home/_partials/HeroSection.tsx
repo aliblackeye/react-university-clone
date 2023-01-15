@@ -68,9 +68,9 @@ const Hero = () => {
       >
         {imageList.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="hero-content ">
-              <div className="hero-img">
-                <Image src={item.image} priority alt="hero" height={490} />
+            <div className="hero-content">
+              <div className="hero-img h-[490px]">
+                <Image src={item.image} priority alt="hero" fill  />
               </div>
 
               <div className="hero-text-wrapper container !px-0">

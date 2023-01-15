@@ -16,7 +16,7 @@ body {
 
 /* Base Styling */
 .container {
-  @apply max-w-[1170px] w-full mx-auto px-4;
+  @apply max-w-[1170px] w-full mx-auto p-4;
 }
 
 /* Header Styling */

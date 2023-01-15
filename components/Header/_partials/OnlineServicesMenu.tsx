@@ -23,7 +23,7 @@ export const OnlineServicesMenu = () => {
           } else {
             return (
               <Link key={key} href="#" style={{ textDecoration: "none" }}>
-                <div className="p-8 flex items-center space-x-2 transition-all hover:bg-white hover:text-primary hover:font-semibold cursor-pointer">
+                <div className="p-8 flex items-center space-x-2 transition-all hover:bg-white hover:text-primary hover:font-semibold cursor-pointer ">
                   {item.icon}
                   <span>{item.text}</span>
                 </div>

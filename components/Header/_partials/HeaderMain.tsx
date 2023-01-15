@@ -16,7 +16,7 @@ export const HeaderMain = () => {
 
   return (
     <header className="header-main relative" onMouseLeave={handleMouseLeave}>
-      <div className="container flex items-center justify-between">
+      <div className="container flex !py-0 items-center justify-between">
         <a href={"http://localhost:3000"}>
           <div className="header-brand relative  w-[217px] h-[66px]">
             <Image
@@ -68,7 +68,7 @@ export const HeaderMain = () => {
                       <Link
                         key={key}
                         href={link?.href}
-                        className="text-[15px] font-normal mb-[10px] max-[275px] hover:underline"
+                        className="text-[15px] font-normal mb-[10px] max-w-[275px] hover:underline"
                       >
                         {link?.text}
                       </Link>

@@ -10,7 +10,7 @@ export const HeaderTop = () => {
   };
   return (
     <header className=" bg-primary text-white font-regular">
-      <div className="header-top container text-m flex justify-between">
+      <div className="header-top container !py-0 text-m flex justify-between">
         <div className="header-top_left flex gap-6 py-4">
           <a href="https://www.medipol.edu.tr/">TR</a>
           <span>|</span>

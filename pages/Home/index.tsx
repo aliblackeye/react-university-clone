@@ -1,6 +1,8 @@
 // Next
 import Head from "next/head";
+import FeaturesSection from "./_partials/FeaturesSection";
 import HeroSection from "./_partials/HeroSection";
+import NewsSection from "./_partials/NewsSection";
 import ParagraphSection from "./_partials/ParagraphSection";
 
 const Home = () => {
@@ -15,6 +17,8 @@ const Home = () => {
       <main>
         <HeroSection />
         <ParagraphSection/>
+        <FeaturesSection/>
+        <NewsSection/>
       </main>
     </>
   );

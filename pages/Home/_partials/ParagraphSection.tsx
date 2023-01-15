@@ -28,7 +28,7 @@ const ParagraphSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState("SELECT MONTH");
   return (
-    <section className="paragraph-section container flex gap-5 pt-10 !px-0">
+    <section className="paragraph-section container flex gap-5 py-10 !px-0">
       <div className="announcements flex flex-col flex-[2] gap-2">
         <div className="announcements-header">
           <h1 className="text-[40px]">Announcements</h1>

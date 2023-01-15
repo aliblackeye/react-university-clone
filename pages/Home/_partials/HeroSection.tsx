@@ -52,7 +52,7 @@ const imageList = [
 
 const Hero = () => {
   return (
-    <section className="hero-section relative">
+    <section className="hero-section relative w-screen">
       <Swiper
         pagination={{
           type: "progressbar",
@@ -69,8 +69,8 @@ const Hero = () => {
         {imageList.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="hero-content">
-              <div className="hero-img h-[490px]">
-                <Image src={item.image} priority alt="hero" fill />
+              <div className="hero-img h-[490px] w-screen">
+                <Image src={item.image} priority alt="hero" fill style={{objectFit:"cover"}} />
               </div>
 
               <div className="hero-text-wrapper container !px-0">

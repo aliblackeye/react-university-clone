@@ -32,26 +32,28 @@ const NewsSection = () => {
   return (
     <section className="news-section container flex flex-col gap-2">
       <h1 className="text-[40px] text-primary">News</h1>
-      <div className="news-cards-wrapper flex justify-between">
+      <div className="news-cards-wrapper flex gap-10 justify-between w-full">
         {newsList.map((item, index) => (
           <div key={index} className="news-card">
-            <div className="news-card-img relative w-[360px] h-[192px]">
+            <div className="news-card-img relative  h-[192px] text-center">
               <Image
                 src={item.image}
                 alt="news"
                 fill
-                style={{ objectFit: "contain" }}
               />
             </div>
             <div className="news-date mt-2">
               <span className="text-secondary">{item.date}</span>
             </div>
-            <h4 className="text-[26px] font-semibold text-primary w-[360px] h-[118px]">
+            <h4 className="text-[26px] font-semibold text-primary max-w-[340px] max-h-[120px]">
               {item.title}
             </h4>
             <p className="text-[16px] mt-2">{item.text}</p>
           </div>
         ))}
+      </div>
+      <div className="all-news-button flex justify-end items-center mt-5">
+        <button className="btn btn-outline-primary !px-16">ALL NEWS</button>
       </div>
     </section>
   );

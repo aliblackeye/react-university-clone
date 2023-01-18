@@ -28,8 +28,8 @@ const ParagraphSection = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState("SELECT MONTH");
   return (
-    <section className="paragraph-section container flex gap-5 py-10 ">
-      <div className="announcements flex flex-col flex-[2] gap-2">
+    <section className="paragraph-section container flex  flex-col md:flex-row gap-5 py-10 ">
+      <div className="announcements flex items-center md:items-start flex-col flex-[2] gap-2">
         <div className="announcements-header">
           <h1 className="text-[40px]">Announcements</h1>
         </div>
@@ -51,8 +51,8 @@ const ParagraphSection = () => {
             </div>
           ))}
         </div>
-        <div className="btn-row flex justify-end mt-5">
-          <div className="btn btn-outline-primary   ">ALL ANNOUNCEMENTS</div>
+        <div className="btn-row flex justify-center md:justify-end mt-5">
+          <div className="btn btn-outline-primary ">ALL ANNOUNCEMENTS</div>
         </div>
       </div>
       <div className="activities flex flex-col flex-[4]">

@@ -1,21 +1,65 @@
 import { navbarElements } from "./headerDatas";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { CgClose } from "react-icons/cg";
+import { RxHamburgerMenu } from "react-icons/rx";
+
+const MenuLinks = [
+  {
+    title: "ACADEMICS",
+    link: "/",
+  },
+  {
+    title: "ABOUT MEDIPOL",
+    link: "/",
+  },
+  {
+    title: "PROSPECTIVE STUDENTS",
+    link: "/",
+  },
+  {
+    title: "ACTIVE STUDENTS",
+    link: "/",
+  },
+  {
+    title: "RESEARCH",
+    link: "/",
+  },
+  {
+    title: "ONLINE SERVICES",
+    link: "/",
+  },
+];
 
 export const HeaderMain = () => {
   // State Variables
   const [submenuItems, setSubmenuItems] = useState<String>("");
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
+  const [hamburgerMenu, setHamburgerMenu] = useState<boolean>(false);
   // Methods
   const handleMouseLeave = () => {
     setIsVisible(false);
     setSubmenuItems("");
   };
 
+  const hamburgerMenuClick = () => {
+    setHamburgerMenu(!hamburgerMenu);
+  };
+
+  useEffect(() => {
+    if (hamburgerMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [hamburgerMenu]);
+
+
+
   return (
-    <header className="header-main relative" onMouseLeave={handleMouseLeave}>
+    <header className="header-main bg-white  sticky top-0 z-[900]" onMouseLeave={handleMouseLeave} >
       <div className="container flex !py-4 lg:!py-0 items-center justify-between">
         <a href={"http://localhost:3000"}>
           <div className="header-brand relative  w-[217px] h-[66px]">
@@ -43,6 +87,39 @@ export const HeaderMain = () => {
             ))}
           </div>
         </nav>
+
+        {/* Hamburger Menu Triggers*/}
+        {hamburgerMenu ? (
+          <CgClose
+            className="close-menu-btn "
+            onClick={hamburgerMenuClick}
+            size={24}
+            cursor={"pointer"}
+          />
+        ) : (
+          <RxHamburgerMenu
+            className="open-menu-btn lg:hidden xs:block"
+            onClick={hamburgerMenuClick}
+            size={24}
+            cursor={"pointer"}
+          />
+        )}
+
+        {hamburgerMenu && (
+          <div className="hamburger-menu active p-5 bg-white fixed z-50 h-[calc(100vh-90px)]  w-screen left-0 bottom-0">
+            <nav className="menu-links flex flex-col gap-5">
+              {MenuLinks.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.link}
+                  className="link-item hover:underline text-[20px] text-primary"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
 
       {/* Header Submenu Items */}

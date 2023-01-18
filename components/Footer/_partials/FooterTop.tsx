@@ -26,8 +26,8 @@ const FooterTop = () => {
       <div className="container ">
         <div className="footer-slider">
           <Swiper
-            slidesPerView={4}
             spaceBetween={10}
+            slidesPerView={4}
             modules={[Navigation, Autoplay]}
             loop={true}
             className="hero-swiper bg-white"
@@ -42,6 +42,7 @@ const FooterTop = () => {
                       fill
                       alt="slide"
                       style={{ objectFit: "contain" }}
+                      priority
                     />
                   </div>
                   <div>{item.title}</div>

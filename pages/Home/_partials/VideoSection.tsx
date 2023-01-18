@@ -3,16 +3,18 @@ import Image from "next/image";
 const VideoSection = () => {
   return (
     <section className="video-section py-10  bg-[#ecf5fd]">
-      <div className="container">
-        <h1 className="text-primary text-[40px] mb-5">Bilimin İzlenebilir Yüzü</h1>
-        <div className="video-container p-10 gap-10 bg-white flex">
+      <div className="container  flex-col flex  items-center md:items-start">
+        <h1 className="text-primary text-[40px] mb-5">
+          Bilimin İzlenebilir Yüzü
+        </h1>
+        <div className="video-container p-10 gap-10 bg-white flex flex-col md:flex-row">
           <iframe
-            width="710"
-            height="400"
+
             src="https://www.youtube.com/embed/DAYnTV-6hBE"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            className="md:w-[710px] md:h-[400px] w-full h-[300px] "
           ></iframe>
 
           <div className="other-videos flex flex-col gap-4">
@@ -52,7 +54,6 @@ const VideoSection = () => {
               </div>
               <span className="max-w-[125px]">Istanbul Medipol University</span>
             </div>
-
           </div>
         </div>
       </div>

@@ -30,25 +30,21 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="news-section container flex flex-col gap-2">
+    <section className="news-section container items-center md:items-start  flex flex-col gap-2">
       <h1 className="text-[40px] text-primary">News</h1>
-      <div className="news-cards-wrapper flex gap-10 justify-between w-full">
+      <div className="news-cards-wrapper flex gap-10 items-center md:justify-between w-full  flex-col md:flex-row">
         {newsList.map((item, index) => (
           <div key={index} className="news-card">
-            <div className="news-card-img relative  h-[192px] text-center">
-              <Image
-                src={item.image}
-                alt="news"
-                fill
-              />
+            <div className="news-card-img relative h-[300px]  md:h-[192px] text-center">
+              <Image src={item.image} alt="news" fill  className="w-full object-contain"/>
             </div>
-            <div className="news-date mt-2">
+            <div className="news-date mt-2 text-center">
               <span className="text-secondary">{item.date}</span>
             </div>
-            <h4 className="text-[26px] font-semibold text-primary max-w-[340px] max-h-[120px]">
+            <h4 className="text-[26px] font-semibold text-center md:text-left text-primary md:max-w-[340px] md:max-h-[120px]">
               {item.title}
             </h4>
-            <p className="text-[16px] mt-2">{item.text}</p>
+            <p className="text-[16px] mt-2 text-center md:text-left">{item.text}</p>
           </div>
         ))}
       </div>

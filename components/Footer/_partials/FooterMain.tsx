@@ -3,7 +3,7 @@ import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi";
 const FooterMain = () => {
   return (
     <footer className="footer-main bg-white ">
-      <div className="container flex justify-between items-center">
+      <div className="container flex flex-col-reverse md:flex-row gap-5 justify-between items-center">
         <div className="left">
           <span> © 2019 Medipol Üniversitesi | Privacy</span>
         </div>

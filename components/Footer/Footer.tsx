@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import FooterMain from "./_partials/FooterMain";
+import FooterTop from "./_partials/FooterTop";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footer">
+      <FooterTop />
+      <FooterMain />
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

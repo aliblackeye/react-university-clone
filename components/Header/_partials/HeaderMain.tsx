@@ -16,7 +16,7 @@ export const HeaderMain = () => {
 
   return (
     <header className="header-main relative" onMouseLeave={handleMouseLeave}>
-      <div className="container flex !py-0 items-center justify-between">
+      <div className="container flex !py-4 lg:!py-0 items-center justify-between">
         <a href={"http://localhost:3000"}>
           <div className="header-brand relative  w-[217px] h-[66px]">
             <Image
@@ -26,8 +26,8 @@ export const HeaderMain = () => {
             />
           </div>
         </a>
-        <nav className="header-navbar  text-primary text-lg font-semibold">
-          <div className="nav-items flex gap-10">
+        <nav className="header-navbar text-primary text-lg font-semibold lg:block hidden ">
+          <div className="nav-items flex gap-10 ">
             {navbarElements.map((el, key) => (
               <a
                 href="#"

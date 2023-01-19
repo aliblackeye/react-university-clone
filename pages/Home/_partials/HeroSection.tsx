@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 // Images
 import slider1 from "../../../assets/images/hero/slider1.png";
-import slider2 from "../../../assets/images/hero/slider2.png";
 import slider3 from "../../../assets/images/hero/slider3.png";
 import slider4 from "../../../assets/images/hero/slider4.png";
 
@@ -21,15 +20,7 @@ const imageList = [
     ),
     buttonText: "Click for more info",
   },
-  {
-    image: slider2,
-    title: (
-      <h1>
-        Have You Discover <span className="font-bold">Our Library</span> ?
-      </h1>
-    ),
-    buttonText: "Click to read the news",
-  },
+
   {
     image: slider3,
     title: (
@@ -75,14 +66,15 @@ const Hero = () => {
                 alt="hero"
                 fill
                 className={"heroimg object-cover "}
-
               />
             </div>
 
             <div className="hero-text-wrapper container  ">
-              <div className="hero-text  md:text-[46px] text-center z-10 top-1/4  -translate-y-5 left-1/4 -translate-x-10  md:left-auto md:ml-5 absolute max-w-[350px]">
-                {item.title}
-                <button className="btn btn-outline-primary text-sm">
+              <div className="hero-text text-[30px]  md:text-[46px] text-center z-10 bottom-0 md:top-1/4  translate-x-14 md:translate-x-0 -translate-y-10 md:-translate-y-5 left-1/4 md:left-auto md:ml-5 absolute max-w-[350px]">
+                <h2 className="hidden md:block mb-4 md:mb-0 md:bg-transparent">
+                  {item.title}
+                </h2>
+                <button className="btn btn-outline-primary !bg-primary !text-white hover:scale-[0.96] text-sm">
                   {item.buttonText}
                 </button>
               </div>

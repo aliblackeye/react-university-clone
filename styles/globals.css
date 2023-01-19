@@ -60,5 +60,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+}
+
+.heroimg {
+  object-position: 65% top !important;
 }

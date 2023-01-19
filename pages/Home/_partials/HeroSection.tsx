@@ -68,35 +68,34 @@ const Hero = () => {
       >
         {imageList.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="hero-content">
-              <div className="hero-img h-[490px] w-full">
-                <Image
-                  src={item.image}
-                  priority
-                  alt="hero"
-                  fill
-                  className={"object-cover object-center"}
-                />
+            <div className="hero-img h-[390px] m:h-[490px] w-full">
+              <Image
+                src={item.image}
+                priority
+                alt="hero"
+                fill
+                className={"heroimg object-cover "}
+
+              />
+            </div>
+
+            <div className="hero-text-wrapper container  ">
+              <div className="hero-text  md:text-[46px] text-center z-10 top-1/4  -translate-y-5 left-1/4 -translate-x-10  md:left-auto md:ml-5 absolute max-w-[350px]">
+                {item.title}
+                <button className="btn btn-outline-primary text-sm">
+                  {item.buttonText}
+                </button>
               </div>
 
-              <div className="hero-text-wrapper container  ">
-                <div className="hero-text text-[46px]  z-10 top-1/4 -translate-y-5 absolute max-w-[350px]">
-                  {item.title}
-                  <button className="btn btn-outline-primary text-sm">
-                    {item.buttonText}
-                  </button>
-                </div>
-
-                <div className="hero-swiper-nav absolute z-20 bottom-0 -translate-y-10 flex gap-8">
-                  <IoIosArrowBack
-                    className="hero-slider-btn prev cursor-pointer text-primary hover:text-black"
-                    size={24}
-                  />
-                  <IoIosArrowForward
-                    className="hero-slider-btn next cursor-pointer text-primary hover:text-black"
-                    size={24}
-                  />
-                </div>
+              <div className="hero-swiper-nav absolute z-20 bottom-0 -translate-y-10 flex gap-8">
+                <IoIosArrowBack
+                  className="hero-slider-btn prev cursor-pointer text-primary hover:text-black"
+                  size={24}
+                />
+                <IoIosArrowForward
+                  className="hero-slider-btn next cursor-pointer text-primary hover:text-black"
+                  size={24}
+                />
               </div>
             </div>
           </SwiperSlide>

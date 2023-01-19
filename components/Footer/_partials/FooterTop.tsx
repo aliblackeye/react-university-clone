@@ -26,16 +26,22 @@ const FooterTop = () => {
       <div className="container ">
         <div className="footer-slider">
           <Swiper
-            spaceBetween={10}
-            slidesPerView={4}
+            slidesPerView={"auto"}
             modules={[Navigation, Autoplay]}
             loop={true}
             className="hero-swiper bg-white"
             autoplay={{ pauseOnMouseEnter: false, disableOnInteraction: false }}
+            breakpoints={{
+              // eşik değerleri (width) ve slidesPerView değerleri
+              320: { slidesPerView: 1 },
+              767: { slidesPerView: 2 },
+              991: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 },
+            }}
           >
             {FooterSliders.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="slide-item flex gap-2 items-center my-5 justify-center w-[275px] h-[63px]">
+                <div className="slide-item flex gap-2 items-center my-5 justify-center w-full h-[63px]">
                   <div className="slide-img w-[64px] h-[30px] relative">
                     <Image
                       src={item.img}

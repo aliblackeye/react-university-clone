@@ -56,12 +56,13 @@ export const HeaderMain = () => {
     }
   }, [hamburgerMenu]);
 
-
-
   return (
-    <header className="header-main bg-white  sticky top-0 z-[900]" onMouseLeave={handleMouseLeave} >
+    <header
+      className="header-main bg-white  sticky top-0 z-[900] shadow-md"
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="container flex !py-4 lg:!py-0 items-center justify-between">
-        <a href={"http://localhost:3000"}>
+        <a href={"/"}>
           <div className="header-brand relative  w-[217px] h-[66px]">
             <Image
               src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
@@ -91,7 +92,7 @@ export const HeaderMain = () => {
         {/* Hamburger Menu Triggers*/}
         {hamburgerMenu ? (
           <CgClose
-            className="close-menu-btn "
+            className="close-menu-btn lg:hidden xs:block "
             onClick={hamburgerMenuClick}
             size={24}
             cursor={"pointer"}
@@ -106,8 +107,36 @@ export const HeaderMain = () => {
         )}
 
         {hamburgerMenu && (
-          <div className="hamburger-menu active p-5 bg-white fixed z-50 h-[calc(100vh-90px)]  w-screen left-0 bottom-0">
-            <nav className="menu-links flex flex-col gap-5">
+          <div className="hamburger-menu active p-5 bg-white fixed z-50 h-[calc(100vh)]  w-screen left-0 bottom-0">
+            <div className="hamburger-header flex justify-between items-center">
+              <a
+                href={"/"}
+                className="header-brand relative flex w-[217px] h-[66px]"
+              >
+                <Image
+                  src="https://www.medipol.edu.tr/themes/custom/medipol/logo-en.svg"
+                  alt="brand"
+                  fill
+                />
+              </a>
+              {/* Hamburger Menu Triggers*/}
+              {hamburgerMenu ? (
+                <CgClose
+                  className="close-menu-btn lg:hidden xs:block "
+                  onClick={hamburgerMenuClick}
+                  size={24}
+                  cursor={"pointer"}
+                />
+              ) : (
+                <RxHamburgerMenu
+                  className="open-menu-btn lg:hidden xs:block"
+                  onClick={hamburgerMenuClick}
+                  size={24}
+                  cursor={"pointer"}
+                />
+              )}
+            </div>
+            <nav className="menu-links flex flex-col gap-5 mt-5">
               {MenuLinks.map((item, index) => (
                 <Link
                   key={index}

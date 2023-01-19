@@ -70,10 +70,8 @@ const Hero = () => {
             </div>
 
             <div className="hero-text-wrapper container  ">
-              <div className="hero-text text-[30px]  md:text-[46px] text-center z-10 bottom-0 md:top-1/4  translate-x-14 md:translate-x-0 -translate-y-10 md:-translate-y-5 left-1/4 md:left-auto md:ml-5 absolute max-w-[350px]">
-                <h2 className="hidden md:block mb-4 md:mb-0 md:bg-transparent">
-                  {item.title}
-                </h2>
+              <div className="hero-text text-[30px] md:text-[46px] text-center z-10 top-1/2 md:top-1/4  -translate-y-5 left-1/4 -translate-x-10  md:left-auto md:ml-5 absolute max-w-[350px]">
+                <h1 className="bg-primary mb-3 md:mb-0 md:bg-transparent text-white md:text-primary">{item.title}</h1>
                 <button className="btn btn-outline-primary !bg-primary !text-white hover:scale-[0.96] text-sm">
                   {item.buttonText}
                 </button>
